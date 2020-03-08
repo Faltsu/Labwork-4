@@ -6,10 +6,6 @@ const routes: Routes = [
 path: '',
 loadChildren: './menu/menu.module#MenuPageModule'
 },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  }
 ];
 @NgModule({
 imports: [
