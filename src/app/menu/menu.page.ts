@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { AuthenticationService } from '../services/authentication.service';
 // Creating the array of the pages, define page names and path inside
 @Component({
 selector: 'app-menu',
@@ -9,10 +10,6 @@ styleUrls: ['./menu.page.scss'],
 export class MenuPage implements OnInit {
 activePath = '';
 pages = [
-{
-name: 'Login',
-path: '/menu/login'
-},
 {
 name: 'Register',
 path: '/menu/register'
@@ -24,13 +21,21 @@ path: '/menu/home'
 {
 name: 'Contact',
 path: '/menu/contact'
+},
+{
+name: 'login',
+path: '/menu/login'
 }
 ]
-constructor(private router: Router) {
+constructor(private router: Router, private authService: AuthenticationService) {
 this.router.events.subscribe((event: RouterEvent) => {
 this.activePath = event.url
 })
 }
 ngOnInit() {
+}
+logout() {
+  this.authService.logout();
+  console.log('Logged out');
 }
 }
