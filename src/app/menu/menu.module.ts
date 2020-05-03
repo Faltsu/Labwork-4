@@ -6,7 +6,8 @@ import { IonicModule } from '@ionic/angular';
 import { MenuPage } from './menu.page';
 import { MenuPageRoutingModule } from './Menu-routing.module';
 import { AuthGuard } from '../guards/auth.guard';
-// Changes made in MenuPageModule
+// Jarkko Hämäläinen 1701558
+//Has paths for the menu array. At the moment authguard blocks access to contact page without login. Proper functionality for authguard pending proper login backend.
 const routes: Routes = [
   {
     path: 'menu',
@@ -29,13 +30,40 @@ const routes: Routes = [
       path: 'login',
       loadChildren: '../login/login.module#LoginPageModule'
       },
+      {
+        path: 'forgot-password',
+        loadChildren: '../forgot-password/forgot-password.module#ForgotPasswordPageModule'
+        },
+      {
+        path: 'personalinfo',
+        loadChildren: '../personalinfo/personalinfo.module#PersonalinfoPageModule'
+      },
+      {
+        path: 'technical',
+        loadChildren: '../technical/technical.module#TechnicalPageModule'
+      },
+      {
+        path: 'soft',
+        loadChildren: '../soft/soft.module#SoftPageModule'
+      },
+      {
+        path: 'personal',
+        loadChildren: '../personal/personal.module#PersonalPageModule'
+      },
+      {
+        path: 'team',
+        loadChildren: '../team/team.module#TeamPageModule'
+      },
+      {
+        path: 'extra',
+        loadChildren: '../extra/extra.module#ExtraPageModule'
+      }
     ]
 },
 
 {
 path: '',
-redirectTo: '/menu/login'
-}
+redirectTo: '/menu/home'}
 ]
 @NgModule({
   imports: [

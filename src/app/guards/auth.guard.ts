@@ -3,7 +3,8 @@ import { CanActivate } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthenticationService } from '../services/authentication.service';
 
-
+//Jarkko Hämäläinen 1701558
+//Authguard code
 @Injectable({
   providedIn: 'root'
 })

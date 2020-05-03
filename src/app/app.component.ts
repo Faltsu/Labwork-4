@@ -26,7 +26,8 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
+//Jarkko Hämäläinen 1701558
+// Subscribe to auth service and if logged, go to home and if not go to login. Currently bugged pending review of code.
       this.authenticationService.authStatus.subscribe(state =>{
         console.log('Auth status: ', state);
         if (state) {

@@ -1,20 +1,18 @@
-<!-- Home page with side menu items -->
+<!-- Jarkko Hämäläinen 1701558
+Home page with buttons to go to different parts of the cv -->
 <ion-header>
   <ion-toolbar>
-  <ion-title>Home</ion-title>
-  <ion-buttons slot="start">
-  <ion-menu-button autoHide="false"></ion-menu-button>
+    <ion-title>Jarkko's CV</ion-title>
+    <ion-buttons slot="start">
+    <ion-menu-button autoHide="false"></ion-menu-button>
   </ion-buttons>
   </ion-toolbar>
-  </ion-header>
-  <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  <ion-toolbar>
-  <ion-title size="large">Welcome to Blank App</ion-title>
-  </ion-toolbar>
-  </ion-header>
-  <div id="container">
-  <strong>Ready to create an app?</strong>
-  <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-  </ion-content>
+</ion-header>
+<ion-content>
+<ion-button [routerLink]="['/menu/personalinfo']" routerDirection="forward">Personal Information</ion-button>
+<ion-button [routerLink]="['/menu/technical']" routerDirection="forward">Technical Skills</ion-button>
+<ion-button [routerLink]="['/menu/soft']" routerDirection="forward">Soft Skills</ion-button>
+<ion-button [routerLink]="['/menu/personal']" routerDirection="forward">Personal Projects</ion-button>
+<ion-button [routerLink]="['/menu/team']" routerDirection="forward">Team Projects</ion-button>
+<ion-button [routerLink]="['/menu/extra']" routerDirection="forward">Extra curricular activities</ion-button>
+</ion-content>

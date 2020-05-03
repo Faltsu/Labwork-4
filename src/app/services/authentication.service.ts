@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { BehaviorSubject } from 'rxjs';
 import { Platform } from '@ionic/angular';
-
+//Jarkko Hämäläinen 1701558
+//Authentication service with function for checking token, login, logout and if the user is authenticated or not.
 const TOKEN_KEY = '';
 
 @Injectable({
